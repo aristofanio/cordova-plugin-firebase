@@ -2,10 +2,11 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
+        google() // added by ari
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:+'
-        classpath 'com.google.gms:google-services:4.1.0'
+        classpath 'com.android.tools.build:gradle:3.1.1'
+        classpath 'com.google.gms:google-services:4.1.0'// added by ari
     }
 }
 repositories {
@@ -13,11 +14,12 @@ repositories {
     maven {
         url "https://maven.google.com"
     }
+    google()  // added by ari
 }
 
 dependencies {
     compile 'me.leolin:ShortcutBadger:1.1.4@aar'
-    compile 'com.google.firebase:firebase-auth:+'
+    compile 'com.google.firebase:firebase-auth:11.4.2'//version defined by ari
     compile('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
        transitive = true
     }
